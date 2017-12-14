@@ -37,6 +37,7 @@ var chosenOperation = "";
 var answer = 0;
 var numbers = document.getElementsByClassName('number');
 var operations = document.getElementsByClassName('operation');
+var fields = document.getElementsByClassName('field');
 
 /* given numbers */
 function showGiven() {
@@ -66,7 +67,10 @@ for (j = 0; j < operations.length; j++) {
     operations[j].addEventListener('click', usedOperation);
 }
 
+/* result */
+
 function result() {
+    /*
     if (chosenOperation == "+") {
         document.getElementById('answer').innerHTML = parseInt(given1String) + parseInt(given2String);
     } else if (chosenOperation == "-") {
@@ -76,6 +80,34 @@ function result() {
     } else if (chosenOperation == "÷") {
         document.getElementById('answer').innerHTML = parseInt(given1String) / parseInt(given2String);
     }
+    */
+    if (chosenOperation == "+") {
+        answer = parseInt(given1String) + parseInt(given2String);
+    } else if (chosenOperation == "-") {
+        answer = parseInt(given1String) - parseInt(given2String);
+    } else if (chosenOperation == "x") {
+        answer = parseInt(given1String) * parseInt(given2String);
+    } else if (chosenOperation == "÷") {
+        answer = parseInt(given1String) / parseInt(given2String);
+    }
+
+    document.getElementById('answer').innerHTML = answer;
 }
 
 document.getElementById('equals').addEventListener('click', result);
+
+/* clear */
+
+function clear() {
+    for (l = 0; l < fields.length; l++) {
+    fields[l].innerHTML = "";
+    }
+    given1String = "";
+    given2String = "";
+    chosenOperation = "";
+    answer = "";
+ 
+}
+
+
+document.getElementById('clear').addEventListener('click', clear);
