@@ -1,36 +1,3 @@
-/******************************************
- * show operations on solution field 
-
-
-var showOperations = document.getElementsByClassName('operation');
-
-for (var i = 0; i < showOperations.length; i++) {
-    showOperations[i].addEventListener('click', operate);
-}
-
-function operate() {
-    document.getElementById('solution').innerHTML = this.getAttribute('data-operation');
-};
- * ***************************************/
-
-/******************************************
- * show numbers on solution field 
-
-
-var showNumbers = document.getElementsByClassName('number');
-
-for (var num = 0; num < showNumbers.length; num++) {
-    showNumbers[num].addEventListener('click', showNum);
-}
-
-function showNum() {
-    document.getElementById('solution').innerHTML += this.getAttribute('data-number');
-}
- * ***************************************/
-
-/**************** */
-
-
 var given1String = "";
 var given2String = "";
 var chosenOperation = "";
@@ -70,25 +37,15 @@ for (j = 0; j < operations.length; j++) {
 /* result */
 
 function result() {
-    /*
+ 
     if (chosenOperation == "+") {
-        document.getElementById('answer').innerHTML = parseInt(given1String) + parseInt(given2String);
+        answer = parseFloat(given1String) + parseFloat(given2String);
     } else if (chosenOperation == "-") {
-        document.getElementById('answer').innerHTML = parseInt(given1String) - parseInt(given2String);
+        answer = parseFloat(given1String) - parseFloat(given2String);
     } else if (chosenOperation == "x") {
-        document.getElementById('answer').innerHTML = parseInt(given1String) * parseInt(given2String);
+        answer = parseFloat(given1String) * parseFloat(given2String);
     } else if (chosenOperation == "÷") {
-        document.getElementById('answer').innerHTML = parseInt(given1String) / parseInt(given2String);
-    }
-    */
-    if (chosenOperation == "+") {
-        answer = parseInt(given1String) + parseInt(given2String);
-    } else if (chosenOperation == "-") {
-        answer = parseInt(given1String) - parseInt(given2String);
-    } else if (chosenOperation == "x") {
-        answer = parseInt(given1String) * parseInt(given2String);
-    } else if (chosenOperation == "÷") {
-        answer = parseInt(given1String) / parseInt(given2String);
+        answer = parseFloat(given1String) / parseFloat(given2String);
     }
 
     document.getElementById('answer').innerHTML = answer;
@@ -99,15 +56,16 @@ document.getElementById('equals').addEventListener('click', result);
 /* clear */
 
 function clear() {
-    for (l = 0; l < fields.length; l++) {
-    fields[l].innerHTML = "";
-    }
+
     given1String = "";
     given2String = "";
     chosenOperation = "";
     answer = "";
- 
-}
 
+    for (l = 0; l < fields.length; l++) {
+    fields[l].innerHTML = "";
+    }
+
+}
 
 document.getElementById('clear').addEventListener('click', clear);
