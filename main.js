@@ -34,6 +34,7 @@ function showNum() {
 var given1String = "";
 var given2String = "";
 var chosenOperation = "";
+var answer = 0;
 var numbers = document.getElementsByClassName('number');
 var operations = document.getElementsByClassName('operation');
 
@@ -64,3 +65,17 @@ function usedOperation() {
 for (j = 0; j < operations.length; j++) {
     operations[j].addEventListener('click', usedOperation);
 }
+
+function result() {
+    if (chosenOperation == "+") {
+        document.getElementById('answer').innerHTML = parseInt(given1String) + parseInt(given2String);
+    } else if (chosenOperation == "-") {
+        document.getElementById('answer').innerHTML = parseInt(given1String) - parseInt(given2String);
+    } else if (chosenOperation == "x") {
+        document.getElementById('answer').innerHTML = parseInt(given1String) * parseInt(given2String);
+    } else if (chosenOperation == "÷") {
+        document.getElementById('answer').innerHTML = parseInt(given1String) / parseInt(given2String);
+    }
+}
+
+document.getElementById('equals').addEventListener('click', result);
