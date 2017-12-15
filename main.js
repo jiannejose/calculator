@@ -9,6 +9,10 @@ var fields = document.getElementsByClassName('field');
 /* given numbers */
 function showGiven() {
 
+    if (answer !== "") {
+        clear();  
+    } 
+    
     if (chosenOperation == "") {
         given1String += this.getAttribute('data-number');
         document.getElementById('solution').innerHTML = given1String;
