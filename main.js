@@ -74,3 +74,25 @@ function clear() {
 }
 
 document.getElementById('clear').addEventListener('click', clear);
+
+
+/* delete */
+
+
+
+function deleteCharacter() {
+    if (answer != "") {
+        return;
+    }
+
+    if (chosenOperation == "") {
+        given1String = given1String.substring(0, given1String.length-1);
+        document.getElementById('answer').innerHTML = given1String;
+    } else if (chosenOperation != "") {
+        given2String = given2String.substring(0, given2String.length-1);
+        document.getElementById('answer').innerHTML = given2String;
+    }
+    
+}
+
+document.getElementById('delete').addEventListener('click', deleteCharacter);
