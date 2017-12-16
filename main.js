@@ -31,7 +31,7 @@ for (i = 0; i < numbers.length; i++) {
 
 function usedOperation() {
     chosenOperation = this.getAttribute('data-operation');
-    document.getElementById('solution').innerHTML = (given1String + chosenOperation);
+    document.getElementById('solution').innerHTML = (given1String + " " + chosenOperation);
 }
 
 for (j = 0; j < operations.length; j++) {
@@ -52,7 +52,7 @@ function result() {
         answer = parseFloat(given1String) / parseFloat(given2String);
     }
 
-    document.getElementById('solution').innerHTML = (given1String + chosenOperation + given2String); 
+    document.getElementById('solution').innerHTML = (given1String + " " + chosenOperation + " " + given2String); 
     document.getElementById('answer').innerHTML = answer;
 }
 
