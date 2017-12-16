@@ -26,21 +26,25 @@ MAIN
   box-shadow: -8px 8px 40px #000;
 }
 
-.calc-solution {
+.field {
   width: 100%;
-  height: 40px;
+  text-align: right;
+  letter-spacing: 0.07em;
   background-color: #fff;
-  padding: 12px;
+  padding: 10px 12px;
   padding-bottom: 0;
 }
 
+.calc-solution {
+  height: 32px;
+  font-size: 13px;
+  color: #23496E;
+}
+
 .calc-answer {
-  width: 100%;
-  height: 50px;
-  background-color: #fff;
-  border-top: 1px solid #9EABBF;
-  padding: 12px;
-  padding-bottom: 0;
+  height: 40px;
+  font-size: 20px;
+  color: #3671AA;
 }
 
 .keys {
