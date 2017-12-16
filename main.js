@@ -15,10 +15,10 @@ function showGiven() {
     
     if (chosenOperation == "") {
         given1String += this.getAttribute('data-number');
-        document.getElementById('solution').innerHTML = given1String;
+        document.getElementById('answer').innerHTML = given1String;
     } else {
         given2String += this.getAttribute('data-number');
-        document.getElementById('solution').innerHTML = given1String + chosenOperation + given2String; 
+        document.getElementById('answer').innerHTML = given2String; 
     }
 }
 
@@ -52,6 +52,7 @@ function result() {
         answer = parseFloat(given1String) / parseFloat(given2String);
     }
 
+    document.getElementById('solution').innerHTML = (given1String + chosenOperation + given2String); 
     document.getElementById('answer').innerHTML = answer;
 }
 
