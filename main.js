@@ -99,12 +99,12 @@ document.getElementById('delete').addEventListener('click', deleteCharacter);
 /* negative sign */
 
 function numSign() {
+    
 
-
-    if (chosenOperation == "") {
+    if (chosenOperation == "" && given1String != "") {
         given1String *= -1;
         document.getElementById('answer').innerHTML = given1String;
-    } else {
+    } else if (given2String != "") {
         given2String *= -1;
         document.getElementById('answer').innerHTML = given2String;
     }
