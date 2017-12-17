@@ -109,7 +109,24 @@ function numSign() {
         document.getElementById('answer').innerHTML = given2String;
     }
 
-
+    
 }
 
 document.getElementById('symbol').addEventListener('click', numSign);
+
+
+/* percent */
+
+function percent() {
+
+    if (chosenOperation == "" && given1String != "") {
+        given1String /= 100;
+        document.getElementById('answer').innerHTML = given1String;
+    } else if (given2String != "") {
+        given2String /= 100;
+        document.getElementById('answer').innerHTML = given2String;
+    }
+
+}
+
+document.getElementById('percent').addEventListener('click', percent);
