@@ -78,8 +78,6 @@ document.getElementById('clear').addEventListener('click', clear);
 
 /* delete */
 
-
-
 function deleteCharacter() {
     if (answer != "") {
         return;
@@ -92,7 +90,28 @@ function deleteCharacter() {
         given2String = given2String.substring(0, given2String.length-1);
         document.getElementById('answer').innerHTML = given2String;
     }
-    
+
 }
 
 document.getElementById('delete').addEventListener('click', deleteCharacter);
+
+
+/* negative sign */
+
+function numSign() {
+
+    if (given1String == "" && given2String == "") {
+        document.getElementById('answer').innerHTML = "";
+    } else if (given1String != "" && chosenOperation != "") {
+        document.getElementById('answer').innerHTML = given1String + chosenOperation;
+    } else if (given1String == Math.abs(given1String) ) {
+        given1String = given1String * -1;
+        document.getElementById('answer').innerHTML = given1String;
+    } else if (given2String == Math.abs(given2String)) {
+        given2String = given2String * -1;
+        document.getElementById('answer').innerHTML = given2String;    
+    }
+
+}
+
+document.getElementById('symbol').addEventListener('click', numSign);
