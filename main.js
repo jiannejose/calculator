@@ -100,17 +100,15 @@ document.getElementById('delete').addEventListener('click', deleteCharacter);
 
 function numSign() {
 
-    if (given1String == "" && given2String == "") {
-        document.getElementById('answer').innerHTML = "";
-    } else if (given1String != "" && chosenOperation != "") {
-        document.getElementById('answer').innerHTML = given1String + chosenOperation;
-    } else if (given1String == Math.abs(given1String) ) {
-        given1String = given1String * -1;
+
+    if (chosenOperation == "") {
+        given1String *= -1;
         document.getElementById('answer').innerHTML = given1String;
-    } else if (given2String == Math.abs(given2String)) {
-        given2String = given2String * -1;
-        document.getElementById('answer').innerHTML = given2String;    
+    } else {
+        given2String *= -1;
+        document.getElementById('answer').innerHTML = given2String;
     }
+
 
 }
 
