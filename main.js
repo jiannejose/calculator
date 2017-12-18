@@ -41,6 +41,10 @@ for (j = 0; j < operations.length; j++) {
 /* result */
 
 function result() {
+
+    if (chosenOperation == "" || given2String == "") {
+        answer = given1String;
+    }
  
     if (chosenOperation == "+") {
         answer = parseFloat(given1String) + parseFloat(given2String);

@@ -9,6 +9,7 @@ GENERAL
 
 body {
   background-color: #252F3F;
+  font-family: 'Roboto', sans-serif;
 }
 
 .clearfix {
@@ -62,6 +63,7 @@ button {
   color: #fff;
   float: left;
   transition: 150ms ease-in;
+  outline: none;
 }
 
 button:nth-child(4n) {
