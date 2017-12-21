@@ -140,7 +140,7 @@ document.getElementById('percent').addEventListener('click', percent);
 
 function decimal() {
 
-    if (given1String.indexOf('.') > -1 || given2String.indexOf('.') > -1) {
+    if (given1String.indexOf('.') > -1 && given2String.indexOf('.') > -1) {
         return;
     }
 

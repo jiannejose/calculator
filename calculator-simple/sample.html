@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sample Calculator</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="samplestyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main class="calc-container">
+            <div class="given-num">
+                <input type="text" id="given1" placeholder="enter number" class="calc-given1">
+                <input type="text" id="given2" placeholder="enter number" class="calc-given2">
+            </div>
+            
+            <div id="result" class="calc-answer"></div>
+
+            <div class="keys">
+                <button id="add" class="add operation" data-operation="add">+</button>
+                <button id="subtract" class="subtract operation" data-operation="subtract">-</button>
+                <button id="multiply" class="multiply operation" data-operation="multiply">x</button>
+                <button id="divide" class="divide operation" data-operation="divide">&divide;</button>
+                <div class="clearfix"></div>
+            </div>
+        </main>
+    </body>
+</html>
