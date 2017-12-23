@@ -32,6 +32,11 @@ for (i = 0; i < numbers.length; i++) {
 function usedOperation() {
     chosenOperation = this.getAttribute('data-operation');
     document.getElementById('solution').innerHTML = (given1String + " " + chosenOperation);
+
+    if (given2String != "") {
+        alert("Sorry, you can only get result of two givens only.");
+    }
+
 }
 
 for (j = 0; j < operations.length; j++) {
